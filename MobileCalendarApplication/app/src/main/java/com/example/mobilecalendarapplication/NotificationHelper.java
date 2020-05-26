@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.ContextWrapper;
 import android.net.Uri;
 import android.os.Build;
+import android.util.Log;
 
 import androidx.core.app.NotificationCompat;
 
@@ -64,6 +65,20 @@ public class NotificationHelper extends ContextWrapper {
 
     public NotificationCompat.Builder getChannelNotification(Activity activity, int reminder, int channelno) {
 
+        Log.d("Notification => ", activity.toString());
+        Log.d("Notification => ", activity.getName());
+        Log.d("Notification => ", activity.getDescription());
+        Log.d("Notification => ", activity.getStartDate());
+        Log.d("Notification => ", activity.getStartTime());
+        Log.d("Notification => ", activity.getEndDate());
+        Log.d("Notification => ", activity.getEndTime());
+        Log.d("Notification => ", activity.getRemeinderStartDate1());
+        Log.d("Notification => ", activity.getRemeinderStartTime1());
+        Log.d("Notification => ", activity.getRemeinderStartDate2());
+        Log.d("Notification => ", activity.getRemeinderStartTime2());
+        Log.d("Notification => ", activity.getAddress());
+
+        Log.d("Notification => ", String.valueOf(reminder));
 
         String name = activity.getName();
         String title = (reminder + 1) + ". hatırlatma zamanı!";
@@ -88,7 +103,14 @@ public class NotificationHelper extends ContextWrapper {
                     // burda notification resmi seçilmeli
                     .setSmallIcon(R.drawable.mobil)
                     .setStyle(new NotificationCompat.BigTextStyle().bigText(title))
-                    .setStyle(new NotificationCompat.BigTextStyle().bigText(text).setSummaryText(name));
+                    .setStyle(new NotificationCompat.BigTextStyle().bigText(text).setSummaryText(name))
+//                kullanılabilir fonksiyn
+//                .setVibrate()
+//                .setSubText()
+//                .setSound()
+//                .setFullScreenIntent()
+//                .set
+                    ;
         } else if (channelno == 2) {
             return new NotificationCompat.Builder(getApplicationContext(), channel2ID)
                     .setContentTitle(title)
@@ -96,7 +118,15 @@ public class NotificationHelper extends ContextWrapper {
                     // burda notification resmi seçilmeli
                     .setSmallIcon(R.drawable.mobil)
                     .setStyle(new NotificationCompat.BigTextStyle().bigText(title))
-                    .setStyle(new NotificationCompat.BigTextStyle().bigText(text).setSummaryText(name));
+                    .setStyle(new NotificationCompat.BigTextStyle().bigText(text).setSummaryText(name))
+                    .setSound(alarmSound)
+//                kullanılabilir fonksiyn
+//                .setVibrate()
+//                .setSubText()
+//                .setSound()
+//                .setFullScreenIntent()
+//                .set
+                    ;
         } else if (channelno == 3) {
             return new NotificationCompat.Builder(getApplicationContext(), channel3ID)
                     .setContentTitle(title)
@@ -104,7 +134,15 @@ public class NotificationHelper extends ContextWrapper {
                     // burda notification resmi seçilmeli
                     .setSmallIcon(R.drawable.mobil)
                     .setStyle(new NotificationCompat.BigTextStyle().bigText(title))
-                    .setStyle(new NotificationCompat.BigTextStyle().bigText(text).setSummaryText(name));
+                    .setStyle(new NotificationCompat.BigTextStyle().bigText(text).setSummaryText(name))
+                    .setSound(alarmSound2)
+//                kullanılabilir fonksiyn
+//                .setVibrate()
+//                .setSubText()
+//                .setSound()
+//                .setFullScreenIntent()
+//                .set
+                    ;
         } else {
             return new NotificationCompat.Builder(getApplicationContext(), channel4ID)
                     .setContentTitle(title)
@@ -112,7 +150,15 @@ public class NotificationHelper extends ContextWrapper {
                     // burda notification resmi seçilmeli
                     .setSmallIcon(R.drawable.mobil)
                     .setStyle(new NotificationCompat.BigTextStyle().bigText(title))
-                    .setStyle(new NotificationCompat.BigTextStyle().bigText(text).setSummaryText(name));
+                    .setStyle(new NotificationCompat.BigTextStyle().bigText(text).setSummaryText(name))
+                    .setSound(alarmSound3)
+//                kullanılabilir fonksiyn
+//                .setVibrate()
+//                .setSubText()
+//                .setSound()
+//                .setFullScreenIntent()
+//                .set
+                    ;
         }
     }
 

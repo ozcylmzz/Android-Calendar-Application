@@ -9,6 +9,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -32,6 +33,7 @@ public class settingsActivity extends AppCompatActivity {
         final SharedPreferences.Editor editor1 = sharedPreferences.edit();
         final boolean isNightModeOn = sharedPreferences.getBoolean("NightMode",false);
         int sound = sharedPreferences.getInt("sound",1);
+        //spinner.setOnItemSelectedListener(this);
         List<String> options = new ArrayList<String>();
         options.add("Default");
         options.add("juntos");
