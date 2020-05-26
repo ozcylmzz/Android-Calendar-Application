@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/mainBackground"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".addActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/mainText"
+                android:fontFamily="@font/raleway_semibold"
+
+                android:text="Etkinlik Ekleme Ekranı"
+                android:textSize="28sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Etkinlik Adı" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="144dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Detay" />
+
+        <EditText
+            android:id="@+id/descp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start|top"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:inputType="textMultiLine" />
+
+        <TextView
+            android:id="@+id/dateStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="0dp"
+            android:ems="10"
+            android:fontFamily="@font/raleway_semibold"
+            android:inputType="date"
+            android:text="Date"
+            android:textColor="@color/mainText" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Etkinlik Başlangıç" />
+
+        <TextView
+            android:id="@+id/timeStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:ems="10"
+            android:inputType="time"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Time" />
+
+        <TextView
+            android:id="@+id/dateEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:ems="10"
+            android:text="Date"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:inputType="date" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Etkinlik Bitiş" />
+
+        <TextView
+            android:id="@+id/timeEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:ems="10"
+            android:inputType="time"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Time" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Adres" />
+
+        <EditText
+            android:id="@+id/adress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:ems="10"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:inputType="textMultiLine" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="153dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Tekrar Sıklığı" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="153dp"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:layout_height="58dp" />
+
+        <TextView
+            android:id="@+id/remeinderDateStart1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:ems="10"
+            android:inputType="date"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Date" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Hatırlatıcı 1" />
+
+        <TextView
+            android:id="@+id/remeinderTimeStart1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:ems="10"
+            android:inputType="time"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Time" />
+
+        <TextView
+            android:id="@+id/remeinderDateStart2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:ems="10"
+            android:inputType="date"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Date" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Hatırlatıcı 2" />
+
+        <TextView
+            android:id="@+id/remeinderTimeStart2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:ems="10"
+            android:fontFamily="@font/raleway_semibold"
+            android:inputType="time"
+            android:text="Time"
+            android:textColor="@color/mainText" />
+
+        <Button
+            android:id="@+id/addbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:background="@drawable/switch_btn_bg"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Etkinlik Ekle"
+            android:textAllCaps="false"
+            android:textColor="@color/mainBackground" />
+
+        <Button
+            android:id="@+id/updateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:visibility="invisible"
+            android:background="@drawable/switch_btn_bg"
+            android:fontFamily="@font/raleway_semibold"
+            android:textAllCaps="false"
+            android:textColor="@color/mainBackground"
+            android:text="Etkinlik Güncelle" />
+
+
+
+    </LinearLayout>
+</ScrollView>

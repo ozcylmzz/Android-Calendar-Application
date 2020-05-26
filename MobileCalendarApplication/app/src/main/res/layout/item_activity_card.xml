@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mainBackground"
+    android:orientation="horizontal" >
+    <!--    burda değer verilmeli, en boy manuel olarak ayarlanmalı, boyuna mutlaka değer verilmeli-->
+
+
+    <!--    burdaki değerler, layoutlar ile oynanarak göze daha çok hitap eden bir görünüm sağlanabilir-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mainBackground"
+        android:orientation="vertical"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="5dp"
+        android:layout_weight="1"
+        tools:ignore="MissingConstraints">
+
+
+
+        <TextView
+            android:id="@+id/activityName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activity Name"
+            android:textAlignment="center"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/activityDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activity Description"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:id="@+id/activityStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activity Start Date"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:id="@+id/activityStartTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activity Start Time"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:id="@+id/activityEndDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activity End Date"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:id="@+id/activityEndTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activity End Time"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:id="@+id/activityAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activity Adress"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:id="@+id/activityRemeinderDate1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activity Remeinder Date 1"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:id="@+id/activityRemeinderTime1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activity Remeinder Time 1"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:id="@+id/activityRemeinderDate2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activity Remeinder Date 2"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:id="@+id/activityRemeinderTime2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activity Remeinder Time 2"
+            android:textColor="@color/mainText"
+            android:fontFamily="@font/raleway_semibold"
+            android:textAlignment="textStart" />
+
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/mainBackground"
+        android:layout_margin="10dp" >
+
+
+
+        <Button
+            android:id="@+id/deleteActivityButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/switch_btn_bg"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Sil"
+            android:textAllCaps="false"
+            android:textColor="@color/mainBackground" />
+
+        <Button
+            android:id="@+id/updateActivityButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/switch_btn_bg"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Güncelle"
+            android:textAllCaps="false"
+            android:textColor="@color/mainBackground" />
+
+        <Button
+            android:id="@+id/shareActivityButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/switch_btn_bg"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Paylaş"
+            android:textAllCaps="false"
+            android:textColor="@color/mainBackground" />
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
