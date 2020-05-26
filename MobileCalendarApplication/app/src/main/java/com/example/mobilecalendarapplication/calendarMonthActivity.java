@@ -60,7 +60,6 @@ public class calendarMonthActivity extends AppCompatActivity {
                 }
 
                 activityList = databaseHelper.getAllActivities();
-                //activityListnew.
                 size = activityList.size();
                 month++;
                 System.out.println("size"+activityList.size());

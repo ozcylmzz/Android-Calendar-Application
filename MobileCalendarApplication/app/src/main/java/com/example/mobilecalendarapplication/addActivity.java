@@ -336,9 +336,6 @@ public class addActivity extends AppCompatActivity {
                 activity.setActivityID(activityID);
 
 
-                // ontimeset fonksiyonundaki startalarm fonksiyonu ile tetikleniyor
-                // start alarm fonksiyonu addactivity butonunun listener ına alınmalı,
-                // bütün bilgiler girilip veritabanına da kaydedildikten sonra çalışacak şekilde olmalı
                 Calendar calendar0 = Calendar.getInstance();
                 calendar0.set(Calendar.YEAR, RstartYear1);
                 calendar0.set(Calendar.MONTH, (RstartMonth1 - 1)); // şu anki ay değerinden -1 olmalı / mantığı 4 ay 18 gün geçmiş olması gibi anlatılabilir
@@ -379,26 +376,13 @@ public class addActivity extends AppCompatActivity {
     }
 
 
-//    @Override
-//    public void onTimeSet(TimePicker timePickerDialog, int hourOfDay, int minute) {
-//
-////        bu fonksiyon devre dışı bırakılmalı veya hatırlatıcı zamanlarına göre güncellenmeli
-////        Calendar c = Calendar.getInstance();
-////        c.set(Calendar.HOUR_OF_DAY, hourOfDay);
-////        c.set(Calendar.MINUTE, minute);
-////        c.set(Calendar.SECOND, 0);
-////        startAlarm(c);
-//    }
+
 
     private void startAlarm(Calendar c, Activity activity, int activityID, int reminder) {
 
-//        Context mContext = ActivityAdapter.getmContext();
 
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(getApplicationContext(), AlertReceiver.class);
-//        intent.putExtra("activity", (Parcelable) activity);
-//        intent.putExtra("reminder", reminder); // ilk hatırlatıcı için 0, diğeri 1
-
         Bundle bundle = new Bundle();
         bundle.putSerializable("activity", (Serializable) activity);
         bundle.putInt("reminder", reminder); // ilk hatırlatıcı için 0, diğeri 1
@@ -406,32 +390,24 @@ public class addActivity extends AppCompatActivity {
         intent.putExtra("bundle",bundle);
 
 
-//        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 1, intent, 0);
-        // request code unique olursa birden çok alarm eklenebilir
-//        alarm id kullanılıp request code olarak gönderilebilir
-//        "alarm id + reminder code" gibi bir değer olurturulabilir / ya da benzer şekilde id olacak bir değer
+
         int id = activityID * 10 + reminder;
         PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), id, intent, 0);
         Log.d("pendingIntent 0", pendingIntent.toString());
 
-//        hangi hatırlatma zamanı ile bildirim atıldığı bilgisi de gönderilmeli
-//        aşağıdaki if bloğu tekrarlama sıklığı için kullanılabilir
-//        if (c.before(Calendar.getInstance())) {
-//            c.add(Calendar.DATE, 1);
-//        }
+
         alarmManager.setExact(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), pendingIntent);
 
-//        alarmManager.cancel();
+
 
     }
 
-    //    public Context addActivityContext
+
     public static void startAlarm2(Calendar c, Activity activity, int activityID, int reminder) {
 
         AlarmManager alarmManager = (AlarmManager) addActivityContext.getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(addActivityContext, AlertReceiver.class);
-//        intent.putExtra("activity", (Parcelable) activity);
-//        intent.putExtra("reminder", reminder); // ilk hatırlatıcı için 0, diğeri 1
+
 
         Bundle bundle = new Bundle();
         bundle.putSerializable("activity", (Serializable) activity);
@@ -440,22 +416,14 @@ public class addActivity extends AppCompatActivity {
         intent.putExtra("bundle",bundle);
 
 
-//        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 1, intent, 0);
-        // request code unique olursa birden çok alarm eklenebilir
-//        alarm id kullanılıp request code olarak gönderilebilir
-//        "alarm id + reminder code" gibi bir değer olurturulabilir / ya da benzer şekilde id olacak bir değer
         int id = activityID * 10 + reminder;
         PendingIntent pendingIntent = PendingIntent.getBroadcast(addActivityContext, id, intent, 0);
         Log.d("pendingIntent 0", pendingIntent.toString());
 
-//        hangi hatırlatma zamanı ile bildirim atıldığı bilgisi de gönderilmeli
-//        aşağıdaki if bloğu tekrarlama sıklığı için kullanılabilir
-//        if (c.before(Calendar.getInstance())) {
-//            c.add(Calendar.DATE, 1);
-//        }
+
         alarmManager.setExact(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), pendingIntent);
 
-//        alarmManager.cancel();
+
 
     }
 
